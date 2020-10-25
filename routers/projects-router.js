@@ -12,4 +12,22 @@ router.get("/projects", async (req, res, next) => {
 	}
 })
 
+router.get("/resources", async (req, res, next) => {
+	try {
+		const resources = await projectsModel.getResources()
+		res.json(resources)
+	} catch(err) {
+		next(err)
+	}
+})
+
+router.get("/tasks", async (req, res, next) => {
+	try {
+		const tasks = await projectsModel.getTasks()
+		res.json(tasks)
+	} catch(err) {
+		next(err)
+	}
+})
+
 module.exports = router
