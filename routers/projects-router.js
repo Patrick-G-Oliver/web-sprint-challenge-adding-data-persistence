@@ -30,4 +30,37 @@ router.get("/tasks", async (req, res, next) => {
 	}
 })
 
+router.post('/projects', (req, res) => {
+    const newProject = req.body;
+    projectsModel.addProject(newProject)
+    .then(project => {
+      res.status(201).json(project);
+    })
+    .catch (err => {
+      res.status(500).json({ message: 'Failed to create new project' });
+    });
+  });
+
+  router.post('/resources', (req, res) => {
+    const newResource = req.body;
+    projectsModel.addResource(newResource)
+    .then(resource => {
+      res.status(201).json(resource);
+    })
+    .catch (err => {
+      res.status(500).json({ message: 'Failed to create new resource' });
+    });
+  });
+
+  router.post('/tasks', (req, res) => {
+    const newTask = req.body;
+    projectsModel.addTask(newTask)
+    .then(task => {
+      res.status(201).json(task);
+    })
+    .catch (err => {
+      res.status(500).json({ message: 'Failed to create new task' });
+    });
+  });
+
 module.exports = router
