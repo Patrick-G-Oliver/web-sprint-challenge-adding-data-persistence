@@ -48,7 +48,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
-Relational databases
+Relational databases contain information that is manipulated through the use of realational database management systems (like SQLite, for example), which in turn are software that is controlled (or, more specifically, queried) through the use of SQL (structured query language). 
 
 2. Why do tables need a `primary key`?
 
@@ -60,7 +60,7 @@ A table column that references a primary key on another table is known as a fore
 
 4. What do we need in order to have a _many to many_ relationship between two tables.
 
-In order to have a many to many relationship between two tables 
+In order to have a many to many relationship between two tables, there needs to exist a link between various items in one given table and various items in anoher given table. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

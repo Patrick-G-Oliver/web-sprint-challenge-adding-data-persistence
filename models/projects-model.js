@@ -23,15 +23,9 @@ FROM resources
 */
 
 function getTasks() {
-    return db("projects_tasks as pt")
-        .innerJoin("projects as p", "p.id", "pt.project_id")
-        .innerJoin("tasks as t", "t.id", "pt.task_id")
-        .select([
-            "t.*",
-            "t.description",
-            "p.name",
-            "p.description"
-        ])
+    return db("tasks as t")
+        .innerJoin("projects as p", "p.id", "t.project_id")
+        .select("t.*", "p.project_name", "p.project_description")
 }
 
 function addProject(project) {
@@ -48,17 +42,6 @@ function addTask(task) {
     return db("tasks")
         .insert(task)
 }
-
-// function addTask() {
-//     return db("projects_tasks as pt")
-//         .innerJoin("projects as p", "p.id", "pt.project_id")
-//         .innerJoin("tasks as t", "t.id", "pt.task_id")
-//         .insert([
-//             "t.*",
-//             "p.name",
-//             "p.description"
-//         ])
-// }
 
 module.exports = {
     getProjects,

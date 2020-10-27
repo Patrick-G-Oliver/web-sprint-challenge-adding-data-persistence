@@ -1,8 +1,8 @@
 exports.seed = async function(knex) {
   await knex("resources").insert([
-    { name: "paint", description: "blue-pigmented viscous fluid"},
-    { name: "paint brush", description: "fibrous bundle for paint application"},
-    { name: "lawn mower", description: "bladed grass-blade serverer"},
-    { name: "edge trimmer", description: "lawn-edge trimming electric whirligig"},
+    { name: "paint", resource_description: "blue-pigmented viscous fluid"},
+    { name: "paint brush", resource_description: "fibrous bundle for paint application"},
+    { name: "lawn mower", resource_description: "bladed grass-blade serverer"},
+    { name: "edge trimmer", resource_description: "lawn-edge trimming electric whirligig"},
   ]);
 };

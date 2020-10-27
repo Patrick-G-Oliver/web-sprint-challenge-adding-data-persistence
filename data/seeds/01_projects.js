@@ -1,6 +1,6 @@
 exports.seed = async function(knex) {
   await knex("projects").insert([
-    { name: "paint fence", description: "apply paint to fence", completed: false},
-    { name: "mow lawn", description: "sever blades of grass uniformly", completed: true},
+    { project_name: "paint fence", project_description: "apply paint to fence", completed: false},
+    { project_name: "mow lawn", project_description: "sever blades of grass uniformly", completed: true},
   ]);
 };
